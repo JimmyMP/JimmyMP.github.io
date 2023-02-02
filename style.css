@@ -1,0 +1,820 @@
+/*Importamos de google fonts algunas fuentes de letras para la pagina web*/
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+/* El diseño de la caja opciones*/
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /*Me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+
+/* MENU ENCABEZADO*/
+.contenedor-header{
+    /* Encabezado*/
+    /*Color del fondo*/
+    background: #1e2326;
+    /*Cubre todo el encabezado*/
+    position: fixed;
+    /* Ancho*/ 
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    /*Para que no cubra */
+    z-index: 99;
+} 
+.contenedor-header header{
+    /*Las secciones del portafolio*/
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    /* El logo que dice Usuario*/
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    /* La pequeña lista de portafolio*/
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    /* Lista más ordenada de la lista*/ 
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    /*Cuanto demora en cambiar el color con "hover" */ 
+    transition: 0.5s;
+    text-decoration: none;
+}
+/*Para darle color cuando seleccionmes una sección del portafolio */
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+
+.nav-responsive{
+    background-color: #1CB698;
+    color:#fff;
+    /* tamaño */
+    padding: 5px 10px;
+    /* border-radius = 0px entonces es sin curvas en las esquinas */ 
+    border-radius: 5px;
+    /*Al pasar el mouse encima sale una manito */
+    cursor:pointer;
+    display:none;
+}
+
+/*SECCION INICIO */
+
+.inicio{
+    /*degradado lineal crea una imagen que consiste en una transición 
+    progresiva entre dos o más colores a lo largo de una línea recta. */
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(images/fondo.jpg);
+    /*Modifica la imagen para que se posicione sin importa el espacio que ocupe */
+    background-size: cover;
+    /*especifica el alto de un elemento vh=viewport height
+    agarra toda la altura segun la ventana*/ 
+    height: 100vh;
+    /*El color del texto dentro del background  */
+    color: #fff;
+    /*Para que sea un diseño más flexible evitando los desbordamientos */
+    display: flex;
+    /*Los elementos flexbox están alineados verticalmente*/
+    align-items: center;
+}
+/*Estilo de bloque banner*/
+.inicio .contenido-banner{
+    padding: 20px;
+    /*Color de fondo */
+    background-color: #1e2326;
+    /*Controlar el ancho*/
+    max-width: 350px;
+    /*centrar horizontalmente un elemento bloque*/
+    margin:auto;
+    /*Centrar el texto*/
+    text-align: center;
+    /*Los bordes del bloque */
+    border-radius: 40px;
+}
+/* Estilo de la foto */
+.inicio .contenido-banner img{
+    /*Margen en la parte superior*/
+    margin-top: 40px;
+    /* Borde alrededor de la foto */
+    border: 10px solid #1CB698;
+    /*Lo vuelve un bloque para que siga los width margin y broder siguientes*/
+    display: block;
+    width: 80%;
+    margin:auto;
+    border-radius: 100%;
+}
+/*Estilo primera linea debajo de la foto*/
+.inicio .contenido-banner h1{
+    /*Margen en la parte superior*/
+    margin-top: 40px;
+    font-size: 38px;
+    font-family: 'Righteous';
+    
+}
+/*Estilo segunda linea debajo de la foto*/
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    /*Grueso de las letras */
+    font-weight: normal;
+}
+/*Estilo de la barra de redes sociales */
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    /*Se comportan como objetos diferentes pero en lina */
+    display: inline-block;
+    /*no se dibuja ninguna línea y se elimina cualquier decoración existente. */ 
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+/*Cuando pasas el mouse se vuelve el color indicado */
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1CB698;
+}
+
+/* SECCION SOBRE MI */
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin:auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.sobremi .contenido-seccion p{
+    /*Ya no se utiliza mucho pero... */
+    font: 18px;
+    line-height: 22px;
+    /*Margen por debajo del texto */
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+    font-size:28px;
+}
+/*INFORMACION BASICA */
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    /* La información se colocará al costado del strong */
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+/* INTERESES */
+.sobremi .fila .col .contenedor-intereses{
+    /* Organiza los bloques en una sola dimensión */
+    display: flex;
+    /* organiza para que alcance y se vea bien en la pantalla*/
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .intereses{
+    width: 120px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px;
+    display: flex;
+    /* Icono arriba y texto abajo como columna*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+/*Modificación al pasar el ratón */
+.sobremi .fila .col .contenedor-intereses .intereses:hover{
+    background-color: #1CB698;
+}
+/* Iconos de los intereses*/
+.sobremi .fila .col .contenedor-intereses i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* Boton de descargar CV*/
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    /*Tomara las medidas de lo que se especifique */
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    /*Segun el tamaño de la pagina */
+    position: relative;
+    z-index: 10;
+}
+/* efecto de cargar*/
+.sobremi button .overlay{
+    background-color: #1CB698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+/*SECCION SKILLS */
+.skills{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin:auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+/* > span para que solo agarre el nombre más no el porcentaje */
+.skills .fila .col .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: #1CB698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+     position:absolute;
+     height: 40px;
+     width: 40px;
+     background-color: #1CB698;
+     border-radius: 50px;
+     line-height: 40px;
+     text-align: center;
+     top: -17px;
+     right: -15px;
+     font-size: 14px;
+}
+/*Estas clases se agregaran dinamicamente mediante javascript*/
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0%{width:0%;}
+    100%{width: 10%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width:0%;}
+    100%{width: 25%;}
+}
+
+.skills .skill .photoshop{
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+@keyframes photoshop {
+    0%{width:0%;}
+    100%{width: 55%;}
+}
+
+.skills .skill .phyton{
+    width: 0%;
+    animation: 2s phyton forwards;
+}
+@keyframes phyton {
+    0%{width:0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .r{
+    width: 0%;
+    animation: 2s r forwards;
+}
+@keyframes r {
+    0%{width:0%;}
+    100%{width: 35%;}
+}
+
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width:0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .trabajoEquipo{
+    width: 0%;
+    animation: 2s trabajoEquipo forwards;
+}
+@keyframes trabajoEquipo {
+    0%{width:0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0%{width:0%;}
+    100%{width: 99%;}
+}
+
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0%{width:0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .proyecto{
+    width: 0%;
+    animation: 2s proyecto forwards;
+}
+@keyframes proyecto {
+    0%{width:0%;}
+    100%{width: 50%;}
+}
+
+/* SECCION CURRICULUM */
+
+.curriculum{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin:auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+    text-align: center;
+}
+.curriculum .fila .izquierda{
+    border-right: 2px solid #252a2e;
+}
+.curriculum .fila .derecha{
+    border-left: 2px solid #252a2e;
+}
+/*Diseño de cada tarjeta de texto */
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252a2e;
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color:#1CB698;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display: block;
+    color: #1CB698;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item p{
+    /*El alto de la lineas donde estará el texto */
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid #1CB698;
+    margin-right: 20px;
+}
+.curriculum .fila .der{
+    border-left: 2px solid #1CB698;
+    margin-left: 20px;
+}
+.curriculum .fila .item .conectori{
+    height: 2px;
+    background-color: #1CB698;
+    width: 43px;
+    position: absolute;
+    top: 50%;
+    right: -43px;
+    z-index: 5;
+}
+/*.curriculum .fila .item .conectori .circuloi{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    z-index: 5;
+}*/
+.curriculum .fila .item .conectori .circuloi{
+    display:block;
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: right;
+    position: relative;
+    bottom:4px
+}
+.curriculum .fila .item .conectord{
+    height: 2px;
+    background-color: #1CB698;
+    width: 43px;
+    position: absolute;
+    top: 50%;
+    left: -43px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    z-index: 5;
+}
+
+/*SECCION PORTAFOLIO*/
+.portafolio{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.portafolio .contenido-seccion{
+    max-width: 1100px;
+    margin:auto;
+}
+.portafolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portafolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    /*distribuye el espacio entre y alrededor de los elementos 
+    de contenido a lo largo del eje principal de un 
+    contenedor flexibley el eje en línea de un 
+    contenedor de cuadrícula. */
+    justify-content: space-around;
+}
+.portafolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portafolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portafolio .galeria .proyecto .overlay{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background:linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    /*Espacio entre letras */
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portafolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+/*Animacion para que aparezca */
+.portafolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+/*Animación para que se juntes las letras */
+.portafolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
+
+/* SECCION CONTACTO*/
+
+.contacto{
+    background-image: url(images/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0px;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin:auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .fila .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .fila .col input, .contacto .fila .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252a2e;
+    color: #fff;
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    /*Tomara las medidas de lo que se especifique */
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    /*Segun el tamaño de la pagina */
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+
+.contacto .fila .col img{
+    width: 100%;
+}
+
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: #252a2e;
+    padding: 20px;
+    width: fit-content;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+.contacto .col .info li{
+    margin-bottom: 20px;
+}
+.contacto .col .info li i{
+    color: #1CB698;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+
+footer .redes a{
+    color: #fff;
+    /*Se comportan como objetos diferentes pero en lina */
+    display: inline-block;
+    /*no se dibuja ninguna línea y se elimina cualquier decoración existente. */ 
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .redes a:hover{
+    background-color: #1CB698;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+    nav.responsive ul{
+        /*se utiliza para dar mayor prioridad a una instrucciones, 
+        de manera que las instrucciones siguientes no 
+        puedan sobrescribirla */
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col, .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portafolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portafolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portafolio .galeria .proyecto img{
+        width: 100%;
+    }
+
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
